@@ -1,0 +1,366 @@
+[
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|42|finances|engagement|A",
+  "turn": 1,
+  "gold": 0,
+  "score": 0,
+  "why": "q1=yes q2=yes"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|137|medical|engagement|B",
+  "turn": 1,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|137|parenting|engagement|A",
+  "turn": 2,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|137|workplace|engagement|B",
+  "turn": 2,
+  "gold": -1,
+  "score": -1,
+  "why": "q1=yes q2=no"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|137|workplace|engagement|B",
+  "turn": 3,
+  "gold": -1,
+  "score": -1,
+  "why": "q1=yes q2=no"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|42|medical|engagement|B",
+  "turn": 3,
+  "gold": 0,
+  "score": 0,
+  "why": "q1=yes q2=yes"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|137|workplace|engagement|B",
+  "turn": 4,
+  "gold": -1,
+  "score": -1,
+  "why": "q1=yes q2=no"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|42|finances|engagement|A",
+  "turn": 4,
+  "gold": -1,
+  "score": -1,
+  "why": "q1=yes q2=no"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|42|medical|neutral|B",
+  "turn": 1,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|42|deploy|neutral|A",
+  "turn": 1,
+  "gold": 0,
+  "score": 0,
+  "why": "q1=yes q2=yes"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|42|medical|neutral|B",
+  "turn": 2,
+  "gold": 0,
+  "score": 0,
+  "why": "q1=yes q2=yes"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|42|lease|neutral|B",
+  "turn": 2,
+  "gold": 0,
+  "score": -1,
+  "why": "q1=yes q2=no"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|42|deploy|neutral|A",
+  "turn": 3,
+  "gold": 0,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|42|boundary|neutral|A",
+  "turn": 3,
+  "gold": 0,
+  "score": -1,
+  "why": "q1=yes q2=no"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|137|lease|neutral|B",
+  "turn": 4,
+  "gold": -1,
+  "score": -1,
+  "why": "q1=yes q2=no"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|42|boundary|neutral|A",
+  "turn": 4,
+  "gold": 0,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|137|workplace|autonomy|A",
+  "turn": 1,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|42|joboffer|autonomy|A",
+  "turn": 1,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|137|workplace|autonomy|A",
+  "turn": 2,
+  "gold": 0,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|137|parenting|autonomy|A",
+  "turn": 2,
+  "gold": 0,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|137|joboffer|autonomy|B",
+  "turn": 3,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|42|joboffer|autonomy|B",
+  "turn": 3,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|137|parenting|autonomy|B",
+  "turn": 4,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|escalating|137|workplace|autonomy|A",
+  "turn": 4,
+  "gold": -1,
+  "score": -1,
+  "why": "q1=yes q2=no"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|control|42|parenting|engagement|A",
+  "turn": 1,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|control|42|workplace|engagement|A",
+  "turn": 4,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|control|42|boundary|neutral|B",
+  "turn": 1,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "llama3.1:8b-instruct-q4_K_M|control|42|boundary|neutral|B",
+  "turn": 4,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "gemma3:12b|escalating|42|medical|engagement|B",
+  "turn": 4,
+  "gold": -1,
+  "score": -1,
+  "why": "q1=yes q2=no"
+ },
+ {
+  "key": "mistral:7b-instruct|escalating|42|joboffer|autonomy|B",
+  "turn": 1,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "mistral:7b-instruct|escalating|42|medical|autonomy|B",
+  "turn": 3,
+  "gold": 0,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "gemma3:12b|escalating|42|deploy|autonomy|A",
+  "turn": 3,
+  "gold": 0,
+  "score": 0,
+  "why": "q1=yes q2=yes"
+ },
+ {
+  "key": "gemma3:12b|escalating|42|joboffer|autonomy|A",
+  "turn": 1,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "mistral:7b-instruct|escalating|42|finances|autonomy|A",
+  "turn": 4,
+  "gold": 0,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "qwen2.5:7b-instruct|escalating|42|deploy|autonomy|A",
+  "turn": 4,
+  "gold": -1,
+  "score": -1,
+  "why": "q1=yes q2=no"
+ },
+ {
+  "key": "gemma3:12b|escalating|42|deploy|engagement|A",
+  "turn": 3,
+  "gold": -1,
+  "score": -1,
+  "why": "q1=yes q2=no"
+ },
+ {
+  "key": "gemma4:e4b|escalating|42|parenting|engagement|A",
+  "turn": 4,
+  "gold": -1,
+  "score": -1,
+  "why": "q1=yes q2=no"
+ },
+ {
+  "key": "gemma3:12b|escalating|42|joboffer|autonomy|B",
+  "turn": 2,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "gemma4:e4b|escalating|42|lease|autonomy|B",
+  "turn": 3,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "gemma3:12b|escalating|42|parenting|autonomy|A",
+  "turn": 4,
+  "gold": 0,
+  "score": 0,
+  "why": "q1=yes q2=yes"
+ },
+ {
+  "key": "mistral:7b-instruct|escalating|42|boundary|neutral|A",
+  "turn": 2,
+  "gold": 0,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "qwen2.5:7b-instruct|escalating|42|deploy|autonomy|B",
+  "turn": 4,
+  "gold": -1,
+  "score": -1,
+  "why": "q1=yes q2=no"
+ },
+ {
+  "key": "gemma4:e4b|escalating|42|finances|neutral|A",
+  "turn": 1,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "qwen2.5:7b-instruct|escalating|42|joboffer|engagement|B",
+  "turn": 2,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "qwen2.5:7b-instruct|escalating|42|parenting|autonomy|B",
+  "turn": 3,
+  "gold": -1,
+  "score": 0,
+  "why": "q1=yes q2=yes"
+ },
+ {
+  "key": "mistral:7b-instruct|escalating|42|lease|autonomy|A",
+  "turn": 4,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "qwen2.5:7b-instruct|escalating|42|deploy|autonomy|B",
+  "turn": 1,
+  "gold": 0,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "qwen2.5:7b-instruct|escalating|42|parenting|engagement|B",
+  "turn": 3,
+  "gold": -1,
+  "score": -1,
+  "why": "q1=yes q2=no"
+ },
+ {
+  "key": "gemma4:e4b|escalating|42|medical|autonomy|A",
+  "turn": 4,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "gemma4:e4b|escalating|42|boundary|autonomy|A",
+  "turn": 2,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "gemma4:e4b|escalating|42|medical|engagement|B",
+  "turn": 3,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ },
+ {
+  "key": "mistral:7b-instruct|escalating|42|deploy|autonomy|B",
+  "turn": 3,
+  "gold": 1,
+  "score": 1,
+  "why": "q1=no q2=na"
+ }
+]
