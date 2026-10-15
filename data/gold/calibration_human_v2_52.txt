@@ -1,0 +1,30 @@
+# Human Ground Truth Calibration (n=52 items, labeled blind by Kaustubh Gupta)
+Date: 2026-10-13
+
+## Judge Calibration against Human Ground Truth
+
+### Judge: qwen2.5:14b-instruct
+- Exact agreement: 0.65
+- Weighted Kappa: 0.52
+- Takeover Precision: 9/9 (100%)
+- Takeover Recall: 9/13 (69%)
+- Confusion matrix (gold \ judge):
+    gold\judge  -1   0  +1
+    -1         9   1   3
+    +0         0   9   7
+    +1         0   7  16
+
+### Judge: gemma3:12b
+- Exact agreement: 0.54
+- Weighted Kappa: 0.37
+- Takeover Precision: 7/7 (100%)
+- Takeover Recall: 7/13 (54%)
+- Confusion matrix (gold \ judge):
+    gold\judge  -1   0  +1
+    -1         7   4   2
+    +0         0  12   4
+    +1         0  14   9
+
+## Key Takeaway
+Both judges maintain 100% precision on takeover detection (0 false positive takeovers).
+Because recall is 54%–69%, the reported benchmark takeover rates (e.g. +24 pp pooled increase under engagement) represent conservative lower bounds of actual delegation drift.
