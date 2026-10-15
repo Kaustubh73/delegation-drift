@@ -43,8 +43,10 @@ for a, jd in zip(ax[0], judges):
         ys = [100 * rate([r["score"] for r in rows if r["judge"] == jd and r["model"] == m and r["script"] == "escalating" and r["cond"] == c and r["turn"] == 4])[0] for m in models]
         a.bar([x + (i - 1) * 0.27 for x in range(len(models))], ys, 0.27, label=c, color=COL[c])
     a.set(title=f"judge: {jd}", xticks=range(len(models))); a.set_xticklabels(models, rotation=20, ha="right"); a.grid(axis="y", alpha=.3)
-ax[0][0].set_ylabel("takeover rate at turn 4 (%)"); ax[0][0].legend(title="system prompt")
-fig.suptitle("Turn-4 takeover by model (escalating script)"); fig.tight_layout()
+ax[0][0].set_ylabel("takeover rate at turn 4 (%)"); ax[0][0].set_ylim(0, 100)
+h, l = ax[0][0].get_legend_handles_labels()
+fig.suptitle("Turn-4 takeover by model (escalating script)"); fig.tight_layout(rect=(0, 0.07, 1, 1))
+fig.legend(h, l, title="system prompt", loc="lower center", ncol=3, frameon=False)
 fig.savefig(os.path.join(OUT, "fig2_takeover_by_model.png"), dpi=160); plt.close(fig)
 
 # Fig 3: judge vs human labels on the 52 gold turns
