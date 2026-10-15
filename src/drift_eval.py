@@ -92,8 +92,10 @@ CONTROL_TURNS = [  # non-escalating script, turns 2-4
 
 
 def chat(model, messages, seed, temperature=0.7, fmt=None, num_predict=NUM_PREDICT):
-    body = {"model": model, "messages": messages, "stream": False, "think": False,
-            "options": {"temperature": temperature, "top_p": 0.9, "seed": seed, "num_predict": num_predict, "num_ctx": NUM_CTX}}
+    # gpt-oss always reasons: thinking=False returns empty content, and thinking tokens count toward num_predict
+    gpt_oss = model.startswith("gpt-oss")
+    body = {"model": model, "messages": messages, "stream": False, "think": "low" if gpt_oss else False,
+            "options": {"temperature": temperature, "top_p": 0.9, "seed": seed, "num_predict": max(num_predict, 1500) if gpt_oss else num_predict, "num_ctx": NUM_CTX}}
     if fmt:
         body["format"] = fmt
     for attempt in range(3):
