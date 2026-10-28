@@ -1,0 +1,14 @@
+{
+  "timestamp_utc": "2026-10-09T05:59:07.608122",
+  "model": "llama3.1:8b-instruct-q4_K_M",
+  "seeds": [
+    42
+  ],
+  "num_scenarios": 3,
+  "conditions": [
+    "engagement",
+    "neutral",
+    "autonomy"
+  ],
+  "total_trajectories": 9
+}

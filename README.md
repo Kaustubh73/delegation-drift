@@ -60,14 +60,23 @@ The other subcommands are `run`, `judge`, `tag` and `tag_strict`; see `src/drift
 
 | Path | Contents |
 |---|---|
-| `src/drift_eval.py` | harness: run, judge, calibrate, tag, analyze |
+| `src/drift_eval.py` | harness: run, judge, calibrate, tag, analyze, survival |
 | `src/make_figures.py` | builds the figures in `results/` |
 | `src/lanes.sh` | runs all models and judges in sequence |
-| `data/runs/` | raw trajectories and judge outputs per model (read-only) |
+| `src/run_tierB_models*.sh`, `src/run_simsens.sh` | persistent (LLM-simulated user) runs |
+| `src/tierB_analysis.py`, `src/fig_survival.py`, `src/overrefusal_t4.py` | analysis of the persistent runs and the over-refusal check |
+| `src/judges/` | scripts that add a third judge (gpt-oss, Qwen2.5-32B on Modal) to the scripted runs |
+| `src/implicit/` | scripts for an implicit-engagement condition (prompts, Modal generation, analysis); not run yet |
+| `src/pilot_v0/` | the original pilot scripts |
+| `data/runs/` | raw trajectories and judge outputs per model (read-only), including the extra judge files |
+| `data/runs_adaptive/` | raw persistent-user runs and pilots; not yet analysed in this README |
+| `data/pilot_v0/` | raw output of the first pilot |
 | `data/gold/` | my 52 human labels, the items they refer to, judge-agreement summaries, and gpt-oss per-turn outputs |
 | `results/` | figures |
 | `RUBRIC.md` | score definitions and the decision procedure behind the judge prompt |
 | `references.bib` | cited and model papers |
+
+Paths inside the scripts were updated when the repository was reorganised. The new layout has not been re-run end to end, so report anything that fails.
 
 ## AI use
 
