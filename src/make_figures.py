@@ -63,10 +63,10 @@ if judges_gold:
             for j in range(3): a.text(j, i, M[i][j], ha="center", va="center", color="white" if M[i][j] > 8 else "black")
         a.set(xticks=range(3), yticks=range(3), xticklabels=["-1", "0", "+1"], yticklabels=["-1", "0", "+1"], xlabel="judge", ylabel="human",
               title=f"{jd}\nexact {sum(x == y for x, y in pairs)/len(pairs):.2f}, w-kappa {weighted_kappa(pairs):.2f} (n={len(pairs)})")
-    fig.tight_layout(); fig.savefig(os.path.join(OUT, "fig3_judge_vs_human.png"), dpi=160); plt.close(fig)
+    fig.tight_layout(); fig.savefig(os.path.join(OUT, "fig4_judge_calibration.png"), dpi=160); plt.close(fig)
 
-# Fig 4-6: 11-model parameter ladder (if data/runs_ladder/analysis_exp2_out.txt exists)
-ladder_src = os.path.join(ROOT, "data/runs_ladder/analysis_exp2_out.txt")
+# Fig 2 & 3: 11-model parameter ladder
+ladder_src = os.path.join(ROOT, "data/runs/analysis_exp2_out.txt")
 if os.path.exists(ladder_src):
     import re
     LADDER_NAMES = {
@@ -94,7 +94,7 @@ if os.path.exists(ladder_src):
         j_lbl = {"gemma4:12b": "Gemma4 12B judge", "gpt-oss:20b": "gpt-oss 20B judge"}
         models_l = [r["model"] for r in ldata["gemma4:12b"]]
 
-        # Ladder Engagement effect
+        # Fig 2: Engagement effect across all models
         fig, ax = plt.subplots(figsize=(6.5, 4.0))
         for off, (jd, lrows) in zip((-0.16, 0.16), ldata.items()):
             for i, r in enumerate(lrows):
@@ -109,9 +109,9 @@ if os.path.exists(ladder_src):
         ax.set_xlabel("Engagement minus neutral, final-turn takeover (percentage points)")
         ax.plot([], [], "o", mfc="white", mec="#555555", ms=4.5, label="open marker = 4-bit model")
         ax.legend(frameon=False, loc="upper center", bbox_to_anchor=(0.45, -0.14), ncol=3, fontsize=7)
-        fig.tight_layout(); fig.savefig(os.path.join(OUT, "fig4_ladder_engagement.png"), dpi=200); plt.close(fig)
+        fig.tight_layout(); fig.savefig(os.path.join(OUT, "fig2_engagement_by_model.png"), dpi=200); plt.close(fig)
 
-        # Ladder Autonomy effect
+        # Fig 3: Autonomy effect across all models
         fig, ax = plt.subplots(figsize=(6.5, 4.0))
         for off, (jd, lrows) in zip((-0.16, 0.16), ldata.items()):
             for i, r in enumerate(lrows):
@@ -124,6 +124,6 @@ if os.path.exists(ladder_src):
         ax.set_yticks(range(len(models_l))); ax.set_yticklabels([LADDER_NAMES[m] for m in models_l])
         ax.invert_yaxis(); ax.set_xlim(0, 100); ax.set_xlabel("Final-turn takeover (%)")
         ax.legend(frameon=False, loc="lower left", fontsize=7)
-        fig.tight_layout(); fig.savefig(os.path.join(OUT, "fig5_ladder_autonomy.png"), dpi=200); plt.close(fig)
+        fig.tight_layout(); fig.savefig(os.path.join(OUT, "fig3_autonomy_by_model.png"), dpi=200); plt.close(fig)
 
 print("wrote", sorted(os.listdir(OUT)))
