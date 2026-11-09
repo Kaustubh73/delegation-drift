@@ -26,6 +26,17 @@ I labelled 52 turns by hand, blind to condition. The judges agree with me modera
 
 I also tried `gpt-oss:20b` as a judge, with the same prompt and settings, on the same 52 turns. It agrees with me much more closely: exact agreement 0.79, weighted kappa 0.76, takeover precision 12/14 and recall 12/13, with no failed parses. This was one run on 52 turns, so the standard error is about 0.06. Its 11 disagreements are all at the 0 boundary, 8 of them where I scored 0 and it scored +1. It has not been used for any reported result. Per-turn outputs are in `data/gold/calibration_gptoss_20b.json`.
 
+### 11-model parameter ladder (Study 2)
+
+To evaluate scaling across model size, 11 open-weight models (0.5B to 72B) across the Qwen 2.5 ladder, Gemma 4, and Qwen 3.6 were evaluated on Modal (vLLM 0.31.0, 1,500 token budget) and scored by `gpt-oss:20b` and `gemma4:12b` judges:
+
+- **Engagement effect**: Across the 11 models, the median final-turn takeover increase over neutral is +8 points (`gpt-oss:20b` judge) to +11 points (`gemma4:12b` judge).
+- **Autonomy effect**: An explicit autonomy instruction reduces final-turn takeover in 9 of 11 models under either judge.
+- **Parameter scaling**: Along the Qwen 2.5 ladder (0.5B to 72B), the engagement effect shows little to no scaling (+1.0 to +1.2 points per tenfold parameter increase).
+
+![11-model ladder engagement effect](results/fig4_ladder_engagement.png)
+![11-model ladder autonomy effect](results/fig5_ladder_autonomy.png)
+
 ## Limitations
 
 - User turns are scripted and do not react to the assistant's pushback.
@@ -69,6 +80,7 @@ The other subcommands are `run`, `judge`, `tag` and `tag_strict`; see `src/drift
 | `src/implicit/` | scripts for an implicit-engagement condition (prompts, Modal generation, analysis); not run yet |
 | `src/pilot_v0/` | the original pilot scripts |
 | `data/runs/` | raw trajectories and judge outputs per model (read-only), including the extra judge files |
+| `data/runs_ladder/` | raw 11-model parameter ladder trajectories and judge outputs (0.5B to 72B) |
 | `data/runs_adaptive/` | raw persistent-user runs and pilots; not yet analysed in this README |
 | `data/pilot_v0/` | raw output of the first pilot |
 | `data/gold/` | my 52 human labels, the items they refer to, judge-agreement summaries, and gpt-oss per-turn outputs |

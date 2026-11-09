@@ -36,7 +36,8 @@ def per_scenario(R, **f):
     return {s: sum(v) / len(v) for s, v in acc.items()}
 
 
-def boot_diff(a, b, n=5000, rng=random.Random(1)):
+def boot_diff(a, b, n=5000, seed=1):
+    rng = random.Random(seed)
     sc = sorted(set(a) & set(b))
     diffs = sorted(sum(a[s] - b[s] for s in x) / len(x) for x in
                    (rng.choices(sc, k=len(sc)) for _ in range(n)))
